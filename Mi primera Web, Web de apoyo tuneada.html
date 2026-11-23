@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi web</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        .contenedor {
+            max-width: 860px;
+            margin: 28px auto;
+            padding: 26px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+        }
+        .encabezados-demo {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+        }
+        .encabezados-demo h1,
+        .encabezados-demo h2,
+        .encabezados-demo h3,
+        .encabezados-demo h4,
+        .encabezados-demo h5,
+        .encabezados-demo h6 {
+            margin: 6px 0;
+            color: #0f172a;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 24px 0;
+        }
+        blockquote {
+            margin: 16px 0;
+            padding: 12px 18px;
+            background-color: #f1f5f9;
+            border-left: 4px solid #2563eb;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 8px 6px 8px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        a {
+            color: #2563eb;
+            font-weight: 500;
+        }
+        a:hover {
+            color: #1d4ed8;
+        }
+        form {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 22px;
+            margin-top: 14px;
+        }
+        form h2 {
+            margin-top: 0;
+            color: #0f172a;
+            border-bottom: 2px solid #cbd5e1;
+            padding-bottom: 8px;
+        }
+        .campo {
+            margin-bottom: 14px;
+        }
+        label {
+            font-weight: 500;
+        }
+        input[type="text"],
+        input[type="mail"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            max-width: 420px;
+            padding: 8px 11px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            margin-top: 4px;
+            background-color: #ffffff;
+        }
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #1d4ed8;
+        }
+        ol, ul {
+            margin-top: 6px;
+            padding-left: 24px;
+        }
+        table {
+            width: 100%;
+            max-width: 560px;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: #ffffff;
+        }
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+        thead th {
+            background-color: #1e293b;
+            color: #ffffff;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <!-- Estos son los encabezados -->
+        <div class="encabezados-demo">
+            <h1>La primera web de 2 BACH</h1>
+            <h2>La primera web de 2 BACH</h2>
+            <h3>La primera web de 2 BACH</h3>
+            <h4>La primera web de 2 BACH</h4>
+            <h5>La primera web de 2 BACH</h5>
+            <h6>La primera web de 2 BACH</h6>
+        </div>
+
+        <!-- Estos son los párrafos de formato -->
+        <p>Esto es un <b>párrafo</b> de ejemplo</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lectus eget velit interdum eleifend. Nunc quis nunc vel sapien viverra bibendum eu nec urna. Praesent scelerisque quam eget eros blandit mollis. Morbi laoreet urna non risus vehicula venenatis. Maecenas placerat est vel est dignissim, id venenatis quam eleifend. Nullam vitae leo dolor. Maecenas mollis, ex quis dapibus iaculis, leo massa sollicitudin nibh, sed blandit purus neque nec ante. Donec et justo nec tortor iaculis condimentum quis nec ligula. Vivamus at elementum mi.</p>
+
+        <hr>
+
+        <!-- Estos son los párrafos de formato -->
+        <i>Viva el Betis <mark>gane o pierda</mark></i>
+        <p>Aprendiendo <abbr title="Hipertext Markup Languaje">HTML</abbr></p>
+        <blockquote>"Gaudeamus igitur iuvenes dum sumus"</blockquote>
+        <br>
+        <p>Párrafo más alejado</p>
+
+        <hr>
+        <p><u><strong><i>Palenciana</i></strong></u></p>
+
+        <!-- Esto son imágenes -->
+        <img src="https://palenciana.es/wp-content/uploads/2015/04/portada.jpg">
+        <hr>
+        <a href="https://palenciana.es/" target="_blank"><img src="https://www.lavozdelasubbetica.es/asset/thumbnail,1280,720,center,center/media/lavozdelasubbetica/images/2021/05/25/2021052515323996776.jpg"></a>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXjABpkR39xPphz2_dLbbMzlYSn9KTuv8KNOc5irScUg&s=10" alt="Asociación Juvenil de Palenciana" width="200">
+        <hr>
+
+        <!-- Esto son Enlaces -->
+        <a href="https://palenciana.es/">Página oficial Ayuntamiento Palenciana</a>
+        <br>
+        <a href="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Skta-M4jZqavLu5ygZhAWeEPzoHKcMc9XyNT3oQIanHUV1gJXql0516AaTBqt9XmpX4tf3b2Myj_NMUbouc685S2Bu4gddNym2CYjaTaCqXZTTymHv77JAF7uA3SJT2lA4iNfh=s680-w680-h510">Clic aquí para ver foto de Palenciana</a>
+        <br>
+        <a href="https://palenciana.es/wp-content/uploads/2015/04/portada.jpg" width="5000"></a>
+
+        <!-- Formularios -->
+        <h2>Formulario</h2>
+
+        <form>
+            <div class="campo">
+                <label>Nombre</label>
+                <input type="text" name="Nombre" placeholder="Intruduce tu nombre">
+            </div>
+            <br>
+            <div class="campo">
+                <label>Apellido</label>
+                <input type="text" name="Apellido">
+            </div>
+            <div class="campo">
+                <label>Correo</label>
+                <input type="mail" name="Correo">
+            </div>
+            <br>
+            <div class="campo">
+                <label>Escribe tu mensaje</label> <br>
+                <textarea name="Mensaje">Mensaje</textarea>
+            </div>
+            <div class="campo">
+                <label>Género</label> <br>
+                <select name="Género">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                </select>
+            </div>
+            <br>
+            <div class="campo">
+                <label>Género</label> <br>
+                <input type="radio" name="Genero" value="Masculino"> Masculino <br>
+                <input type="radio" name="Genero" value="Femenino"> Femenino <br>
+                <input type="radio" name="Genero" value="Avestruz<"> Avestruz
+            </div>
+            <br>
+            <div class="campo">
+                <label>Edad</label>
+                <input type="number" name="Edad">
+            </div>
+            <br>
+            <div class="campo">
+                <label>Cumpleaños</label>
+                <input type="date" name="Cumpleaños">
+            </div>
+            <br>
+            <div class="campo">
+                <label>Bici</label>
+                <input type="checkbox" name="Vehículo">
+            </div>
+            <br>
+            <div class="campo">
+                <label>Coche</label>
+                <input type="checkbox" name="Vehículo">
+            </div>
+            <br>
+            <div class="campo">
+                <input type="submit" value="Enviar Formulario">
+            </div>
+
+            <br>
+            <!-- Listas -->
+            <label>Lista del Ballon D'or 2026</label>
+            <ol>
+                <li>Harry Kane</li>
+                <li>Mbappe</li>
+                <li>Lamine Yamal</li>
+            </ol>
+            <br>
+
+            <br>
+
+            <label>Lista del Ballon D'or 2026 BERNUY</label>
+            <ul>
+                <li>Baldomero <ul><li>El rey de España</li></ul>
+                </li>
+                <li>Sergio</li>
+                <li>Francisco</li>
+            </ul>
+            <br>
+            <!-- Tablas -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alejandro Ruiz</td>
+                        <td>612 345 678</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>Lucía Gómez</td>
+                        <td>698 765 432</td>
+                        <td>17</td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+```[cite: 4]

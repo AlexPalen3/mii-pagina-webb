@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Palenciana</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #faf6f2;
+            color: #2c241e;
+            line-height: 1.65;
+        }
+        header {
+            background: linear-gradient(135deg, rgb(124, 53, 12), rgb(156, 72, 22));
+            color: rgb(255, 255, 255);
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.3rem;
+            letter-spacing: 0.5px;
+        }
+        .contenedor {
+            max-width: 860px;
+            margin: 26px auto;
+            padding: 0 18px;
+        }
+        .bloque {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 22px;
+            box-shadow: 0 4px 14px rgba(124, 53, 12, 0.07);
+        }
+        h2 {
+            color: rgb(124, 53, 12);
+            margin-top: 0;
+            border-bottom: 2px solid #f0e2d8;
+            padding-bottom: 6px;
+        }
+        h3 {
+            color: #5c2b0e;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        p {
+            text-align: justify;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color: rgb(124, 53, 12);
+            font-weight: 600;
+        }
+        a:hover {
+            color: #4a1e05;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ead8cb;
+            margin: 26px 0;
+        }
+        .widget-tiempo {
+            background-color: #fdf8f4;
+            border: 1px solid #e6d2c3;
+            border-left: 5px solid rgb(124, 53, 12);
+            border-radius: 10px;
+            padding: 18px;
+            margin-top: 12px;
+        }
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .tabla-wrap {
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            font-size: 0.95rem;
+        }
+        caption {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            color: rgb(124, 53, 12);
+        }
+        th, td {
+            padding: 9px 12px;
+            border: 1px solid #d6c3b5;
+            text-align: left;
+        }
+        thead th {
+            background-color: rgb(124, 53, 12);
+            color: #ffffff;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #fdf8f4;
+        }
+        tbody tr:hover {
+            background-color: #f7ece3;
+        }
+        form {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 26px;
+            box-shadow: 0 4px 14px rgba(124, 53, 12, 0.08);
+            border-top: 4px solid rgb(124, 53, 12);
+        }
+        form h2 {
+            text-align: center;
+            border-bottom: none;
+            margin-bottom: 18px;
+        }
+        .campo {
+            margin-bottom: 16px;
+            text-align: left;
+            max-width: 460px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1px solid #cbb6a6;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            margin-top: 5px;
+        }
+        textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+        .opcion-check {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        button[type="button"] {
+            display: block;
+            margin: 20px auto 0;
+            background-color: rgb(124, 53, 12);
+            color: #ffffff;
+            border: none;
+            padding: 11px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        button[type="button"]:hover {
+            background-color: #5c2507;
+        }
+    </style>
+</head>
+
+<!--Encabezado-->
+
+<body>
+    <header>
+        <h1>Palenciana</h1>
+    </header>
+
+    <div class="contenedor">
+        <div class="bloque">
+            <h2>Acerca de Palenciana</h2>
+            <p>Palenciana es un municipio andaluz situado en la provincia de <i><b>Córdoba</b></i>, conocido por su entorno rural y la hospitalidad de sus habitantes.
+                <br>
+                La web municipal lo describe como un "pequeñito y gran rincón andaluz", invitando a visitantes y residentes a explorar sus atractivos.
+                <br><br>
+                Actualmente, el Ayuntamiento de Palenciana está licitando las obras de ampliación y terminación de la Residencia de Mayores, una infraestructura clave para el bienestar local.
+                <br>
+                El lema de la localidad invita a que los visitantes se sientan como en casa, destacando la sencillez y extroversión de sus vecinos.
+                <br>
+                Se le considera al pueblo como "el último pueblo de Córdoba hacia el sur" ya que si sigues avanzando hacia el sur entras a la provincia de Málaga.
+            </p>
+            <img src="https://imgs.search.brave.com/9OjrELGMKsbEf1EYa7OJYnuaKhe3CtUf1hp0xsvk7Gs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9lc3Rh/dGljb3MtY2RuLnBy/ZW5zYWliZXJpY2Eu/ZXMvY2xpcC8wMDIy/ZTg0Yi0wMmViLTQz/NTYtOWZhYS1hYWU4/MDI4NjYxM2VfYWx0/YS1saWJyZS1hc3Bl/Y3QtcmF0aW9fZGVm/YXVsdF8wLmpwZw" alt="Imagen del Pueblo">
+            <br>
+            <a href="https://palenciana.es/" target="_blank">Página oficial Ayuntamiento Palenciana</a>
+
+            <hr>
+
+            <h2>Sobre sus orígenes</h2>
+            <h3>Prehistoria y Edad Antigua</h3>
+            <p><b>Prehistoria:</b> Los datos arqueológicos son escasos, destacando el yacimiento del Cerro de los Toros (junto al río Genil),
+            donde se han hallado molinos de mano, un posible yunque de piedra para sílex y cerámicas asociadas principalmente al Calcolítico
+            avanzado y a la Edad del Bronce (Bronce Pleno y Bronce Final Precolonial), con un posible abandono durante el periodo Orientalizante.</p>
+
+            <h3>Época Romana</h3>
+            <p><b>Época Romana:</b> Tras ese vacío arqueológico, reaparecen vestigios romanos en zonas cercanas al Cerro de los Toros y al sur de la carretera entre El Tejar y Palenciana, con especial relevancia del Cerro del Pozuelo,
+            donde se documentaron materiales de una villa romana y restos de una necrópolis (urnas, lápidas, tegulae, ladrillos y terra sigillata).
+
+            <br><br><mark><u><i><b>Ejemplo de aportación Romana en Córdoba</b> (pincha en la imagen para saber más)</i></u></mark></p>
+            <a href="https://owaytours.com/blog/dejate-sorprender-por-la-cordoba-mas-romana/" target="_blank"><img src="https://imgs.search.brave.com/na8DV2qzIIe9lR4zLdjx4taLJg2Pwjvjp2FChnd3lBk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/ZXhwbG9yZWNvcmRv/YmEuY29tL19hc3Ry/by9yb21hbi1icmlk/Z2UuQ0phX3lOZUpf/MVdJQWpkLndlYnA"
+                alt="Aportación Romana"></a>
+
+            <h3>Edad Media</h3>
+            <p>Durante este periodo el territorio formó parte del término de <u>Benamejí</u><br>En etapa musulmana perteneció a la Cora de Rayya (Málaga) y, tras la caída del Califato, al reino zirí de Granada.
+
+            <br>
+            En la Baja Edad Media quedó en zona fronteriza con Granada —pese a su incorporación cristiana con Fernando III y su donación por
+            Alfonso X a la Orden de Santiago— hasta la toma de Antequera en 1410,
+            tras lo cual volvió a vincularse a la Orden de Santiago durante el resto del siglo XV.</p>
+
+            <img src="https://imgs.search.brave.com/ysitdJmloNs61i-qxt2Ub9G0YNEQ5Uz8hzKDrQ3FCYY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9sYWdv/ZGVhbmRhbHVjaWEu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDI0LzA0L2dyaWV0/YS1iZW5hbWVqaS53/ZWJw" alt="Municipio de Benamejí">
+            <p>Municipio de Benamejí actualmente (foto hecha desde Palenciana).</p>
+
+            <a href="https://benameji.es/" target="_blank">Página oficial Ayuntamiento Benamejí</a>
+
+            <h3>Edad Moderna + Origen del Nombre</h3>
+
+            <p>La página señala que el nombre no proviene de pobladores procedentes de Palencia, sino de una heredad o cortijo
+                llamado Palenciana documentado ya a mediados del siglo XVI, donde luego se asentaría el pueblo.
+                <br>En 1547, tras la desmembración del donadío de Benamejí de la Orden de Santiago, un informe de Juan de León recoge
+                por primera vez el término de Palenciana, con tierras dedicadas a trigo, centeno, pasto, bellota y esparto,
+                arrendadas habitualmente a vecinos de Antequera y ocupadas solo por temporeros.
+                <br>Tras la compra del señorío de Benamejí por Diego de Bernuy a mediados del siglo XVI, comienzan a levantarse casas en torno al cortijo primitivo y se asienta población estable,
+                aunque el crecimiento urbano fue lento (en 1752, el Catastro de Ensenada muestra que el núcleo urbano aún no estaba configurado).
+                En los siglos XVII y XVIII refleja los conflictos jurisdiccionales y la aspiración de autonomía local.</p>
+
+            <h3>Edad Contemporánea</h3>
+            <p><b>Independización de Benamejí:</b> Tras intentos en 1812 y 1820, Palenciana consiguió su emancipación administrativa definitiva en 1834, en el contexto del liberalismo y la abolición del
+                régimen señorial, impulsada también por el malestar ante el reparto desigual de ayudas durante la epidemia de cólera y la crisis de subsistencia de ese año.<br>
+                <u>Sociedad, economía y siglo XX:</u> Mantuvo una marcada tradición liberal y, a finales del siglo XIX, surgieron movimientos republicanos (como el Casino Republicano en 1893).
+                Su economía fue esencialmente agraria, con comercio vinculado a las rutas entre Córdoba y Málaga, y en el entorno de las Sierras Subbéticas se dieron fenómenos de bandolerismo y contrabando hasta mediados del siglo XIX.
+                Al comenzar la Guerra Civil, el 18 de julio de 1936, quedó integrada en la zona nacional.</p>
+        </div>
+
+        <!-- Widget de eltiempo.es -->
+        <div class="bloque">
+            <h2>El tiempo en Palenciana (eltiempo.es)</h2>
+            <div class="widget-tiempo" id="widget-eltiempo-palenciana">
+                <p style="margin-top: 0;">Consulta la previsión meteorológica actualizada para <b>Palenciana</b> a través de <b>eltiempo.es</b>:</p>
+                <a href="https://www.eltiempo.es/palenciana.html" target="_blank">Ver previsión de Palenciana en eltiempo.es</a>
+            </div>
+        </div>
+
+        <div class="bloque">
+            <div class="tabla-wrap">
+                <table border="1">
+                    <caption><b>Evolución demográfica de Palenciana (1842–2025)</b></caption>
+                    <thead>
+                        <tr>
+                            <th>Año</th>
+                            <th>Población (habitantes)</th>
+                            <th>Fuente / Criterio estadístico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1842</td>
+                            <td>1.588</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1857</td>
+                            <td>1.968</td>
+                            <td>Censo INE (Población de hecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1860</td>
+                            <td>2.084</td>
+                            <td>Censo INE (Población de hecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1877</td>
+                            <td>2.115</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1887</td>
+                            <td>2.272</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1897</td>
+                            <td>2.345</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1900</td>
+                            <td>2.492</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1910</td>
+                            <td>2.694</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1920</td>
+                            <td>2.741</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1930</td>
+                            <td>3.049</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1940</td>
+                            <td>3.056</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1950</td>
+                            <td>3.123</td>
+                            <td>Censo INE (Población de derecho — máximo censal)</td>
+                        </tr>
+                        <tr>
+                            <td>1960</td>
+                            <td>3.084</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1970</td>
+                            <td>2.253</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1981</td>
+                            <td>1.844</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>1991</td>
+                            <td>1.683</td>
+                            <td>Censo INE (Población de derecho)</td>
+                        </tr>
+                        <tr>
+                            <td>2001</td>
+                            <td>1.562</td>
+                            <td>Censo INE (Población residente)</td>
+                        </tr>
+                        <tr>
+                            <td>2011</td>
+                            <td>1.629</td>
+                            <td>Censo INE (Población residente)</td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td>1.466</td>
+                            <td>Censo INE (Población residente)</td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td>1.441</td>
+                            <td>Padrón Municipal (INE)</td>
+                        </tr>
+                        <tr>
+                            <td>2024</td>
+                            <td>1.431</td>
+                            <td>Padrón Municipal (INE)</td>
+                        </tr>
+                        <tr>
+                            <td>2025</td>
+                            <td>1.431</td>
+                            <td>Padrón Municipal (INE)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr>
+            <p>Para finalizar, Palenciana es un municipio cordobés situado junto al río Genil, en la comarca de la Subbética, cuyo origen urbano se remonta a un antiguo cortijo del siglo XVI
+                tras siglos vinculado al término de Benamejí. Logró su independencia administrativa definitiva en 1834 y experimentó un notable crecimiento hasta alcanzar su
+                techo demográfico en 1950 (3.123 habitantes), tras lo cual el éxodo rural redujo su población hasta los 1.431 habitantes actuales (2025).
+                Hoy mantiene una economía de base agraria y unas tradiciones populares muy arraigadas, como su Semana Santa y la Feria de la Virgen del Carmen.</p>
+        </div>
+
+        <!-- Vídeo de YouTube: Palenciana Santa - Corto Documental -->
+        <div class="bloque">
+            <h2>Palenciana Santa - Corto Documental</h2>
+            <p>Corto documental sobre la Semana Santa de Palenciana realizado por Ruben Arjona, una muestra de cómo se viven las tradiciones en el pueblo.</p>
+            <div class="video-responsive">
+                <iframe
+                    src="https://www.youtube.com/embed/NnsxandgEeM"
+                    title="Palenciana Santa - Corto Documental"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <form>
+            <h2>Sobre ti</h2>
+            <div class="campo">
+                <label><b>Nombre:</b></label>
+                <input type="text" name="Nombre" placeholder="Intruduce tu nombre">
+            </div>
+
+            <div class="campo">
+                <label><b>Apellido:</b></label>
+                <input type="text" name="Apellido" placeholder="Intruduce tu Apellido/os">
+            </div>
+
+            <div class="campo">
+                <label><b>¿Qué opinas sobre el pueblo?</b></label>
+                <textarea name=""></textarea>
+            </div>
+
+            <div class="campo">
+                <label><b>¿Te ha gustado el pueblo?</b></label>
+                <div class="opcion-check" style="margin-top: 8px;">
+                    <input type="checkbox" name="Sí">
+                    <label>Sí</label>
+                </div>
+                <div class="opcion-check">
+                    <input type="checkbox" name="No">
+                    <label>No</label>
+                </div>
+            </div>
+
+            <button type="button">Enviar Formulario</button>
+        </form>
+    </div>
+</body>
+</html>
+```[cite: 3]
